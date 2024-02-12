@@ -1,4 +1,4 @@
-import Reactfom from "react";
+import React from "react";
 import ItemComponent from "./ItemComponent";
 
 export default function ListComponent(props){
