@@ -10,7 +10,7 @@ export default class UserLists extends React.Component{
                 'Content-Type': 'application/json'
             }
         }
-        config.headers['Authorization'] ='Token' + localStorage.getItem('token');
+        config.headers['Authorization'] ='Token ' + localStorage.getItem('token');
         var url = 'http://127.0.0.1:8000/list/';
         const response = await fetch(url, config);
         const data = await response.json();
@@ -22,8 +22,8 @@ export default class UserLists extends React.Component{
         const listsApi = this.state.lists;
         return (
             <div>
-        {listsApi.map(list => <ListComponent key={list.id} listname={list.name} items={list.item_set} />)}
-        </div>
+                {listsApi.map(list => <ListComponent key={list.id} listname={list.name} items={list.item_set} />)}
+            </div>
         ) 
             
     }
