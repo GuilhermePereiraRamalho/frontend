@@ -27,7 +27,7 @@ export default class LoginComponent extends React.Component{
             body: JSON.stringify({ username: this.state.username, password: this.state.password})
         };
         fetch(url, requestOptions)
-            .then(response => response.json)
+            .then(response => response.json())
             .then(data => localStorage.setItem('token', data.token));
         event.preventDefault();
       }
