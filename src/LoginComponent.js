@@ -49,7 +49,7 @@ export default class LoginComponent extends React.Component{
             <form onSubmit={this.handleSubmit}>
               <label>
                 Name:
-                <input type="username" value={this.state.username} onChange={this.handleChange} />
+                <input type="text" value={this.state.username} onChange={this.handleChange} />
                 <input type="password" value={this.state.password} onChange={this.handleChangePassword} />
               </label>
               <input type="submit" value="Submit" />
@@ -61,9 +61,6 @@ export default class LoginComponent extends React.Component{
                 <UserLists />
                 <button onClick={() => this.logout()}> Logout </button>
               </div>
-              
-
-            )
-           
+            ) 
       }
 }
